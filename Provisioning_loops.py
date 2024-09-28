@@ -3,17 +3,17 @@
 # Date: September 27, 2024
 # Description: This program manages multiple resource allocation requests and checks if the requested CPU cores and memory are available.
 
-# Constants
-TOTAL_CPU_CORES = 16  # Total CPU cores available
-TOTAL_MEMORY_GB = 64.0  # Total memory available in GB
+# Define two Constants
+Total_CPU_cores = 16  # Total CPU cores available
+Total_CPU_memory = 64.0  # Total memory available in GB
 
-# Lists to store allocated and pending requests
+# Creating two empty lists
 allocated_resources = []
 pending_requests = []
 
 # Variables to track remaining resources
-remaining_cpu = TOTAL_CPU_CORES
-remaining_memory = TOTAL_MEMORY_GB
+remaining_cpu = Total_CPU_cores
+remaining_memory = Total_CPU_memory
 
 # Main program loop
 while True:
@@ -38,17 +38,15 @@ while True:
     while True:
         another_request = input("Do you want to make another request? (yes/no): ").strip().lower()
         if another_request == "yes":
-            break  # Continue the loop for another request
+            break  
         elif another_request == "no":
-            # Exit the main loop if the user doesn't want to continue
             print("Exiting the program...")
             break
         else:
-            # If input is not 'yes' or 'no'
             print("Invalid input. Please enter 'yes' or 'no'.")
 
     if another_request == "no":
-        break  # Exit the main loop
+        break  
 
 # Display allocated resources
 print("\nAllocated Resources:")
